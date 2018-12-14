@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>generator.arm</id>
+    <name>JSON Annotation Tool</name>
+    <vendor email="xiaqiulei@126.com"
+            url="https://github.com/LiushuiXiaoxia/SerializedNameGen">
+        LiushuiXiaoxia
+    </vendor>
+
+    <description><![CDATA[
+      Auto add or remove json annotation plugin, such as gson SerializedName, fastjson JSONField, jackson JsonProperty.
+       It also support java and kotlin file.
+    ]]></description>
+
+    <idea-version since-build="141.0" />
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <depends>com.intellij.modules.all</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="generator.BuilderGeneratorAction" id="BuilderGenerator" text="BuilderGenerator">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+    <version/>
+</idea-plugin>
